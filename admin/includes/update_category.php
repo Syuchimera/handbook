@@ -1,4 +1,4 @@
-<?php include('db.php'); ?>
+
 
 
 <?php 
@@ -18,7 +18,8 @@ if (isset($_POST['submit'])) {
 	$query = "UPDATE category SET title='$title' WHERE id='$id'";
 	$result = mysqli_query($conn, $query);
 
-	header('location:../insert_data.php');
+	//header('location:../insert_data.php');
+	$message = 'Data updated';
 }
 
 
@@ -33,8 +34,6 @@ while ($row = mysqli_fetch_assoc($result)) {
 
  ?>
 
- <?php include('header.php'); ?>
-	<?php include('navigation.php'); ?>
 
 
 	<div class="container">
@@ -51,4 +50,3 @@ while ($row = mysqli_fetch_assoc($result)) {
 		</div>
 	</div>
 	
-<?php include('footer.php'); ?>

@@ -1,4 +1,4 @@
-<?php include('db.php'); ?>
+
 
 
 <?php 
@@ -49,15 +49,14 @@ if (isset($_POST['submit'])) {
 		die("query failed" . mysqli_error($conn));
 		exit();
 	} else {
-		//$message = "update successfull";
-		header('location:../add_sub_category.php');
+		$message = "update successfull";
+		// header('location:../add_sub_category.php');
 	}
 }
 
  ?>
 
-<?php include('header.php'); ?>
-	<?php include('navigation.php'); ?>
+
 
 
 	<div class="container">
@@ -103,4 +102,3 @@ if (isset($_POST['submit'])) {
 		</div>
 	</div>
 	
-<?php include('footer.php'); ?>

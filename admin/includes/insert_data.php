@@ -34,7 +34,8 @@ if (isset($_GET['id'])) {
 	$query = "DELETE FROM category WHERE id=$id";
 	$result = mysqli_query($conn, $query);
 
-	header("location:insert_data.php");
+	//header("location:insert_data.php");
+	header("location:index.php?p=add_category");
 }
 
 
@@ -84,8 +85,12 @@ if (isset($_GET['id'])) {
 						<tr>
 							<td><?php echo $row['id']; ?></td>
 							<td><?php echo $row['title']; ?></td>
-							<td><a href="includes/update_category.php?id=<?php echo $row['id']; ?>">edit</a></td>
-							<td><a onclick="javascript: return confirm('delete data?')" href="insert_data.php?id=<?php echo $row['id']; ?>">delete</a></td>
+							<!-- <td><a href="includes/update_category.php?id=<?php //echo $row['id']; ?>">edit</a></td> -->
+
+	<td><a href="index.php?p=update_category&id=<?php echo $row['id']; ?>">edit</a></td>	
+
+	<td><a onclick="javascript: return confirm('delete data?')" href="index.php?p=add_category&id=<?php echo $row['id']; ?>">delete</a></td>		
+							<!-- <td><a onclick="javascript: return confirm('delete data?')" href="insert_data.php?id=<?php //echo $row['id']; ?>">delete</a></td> -->
 							
 						</tr>
 

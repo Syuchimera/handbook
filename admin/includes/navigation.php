@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.php">Home</a>
+      <a class="navbar-brand" href="index.php">Home</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -16,6 +16,7 @@
       <ul class="nav navbar-nav">
         <li><a href="index.php?p=add_category">Add Category</a></li>
         <li><a href="index.php?p=add_sub_category">Add Sub Category</a></li>
+        <li><a href="../index.php">Site</a></li>
         <li><a href="includes/logout.php">Logout</a></li>
         
       </ul>

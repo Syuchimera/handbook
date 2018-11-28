@@ -12,7 +12,7 @@ if (isset($_GET['id'])) {
 	$query = "DELETE FROM data WHERE id=$id";
 	$result = mysqli_query($conn, $query);
 
-	header("location:insert_data.php");
+	header("location:index.php?p=add_sub_category");
 }
 }
 

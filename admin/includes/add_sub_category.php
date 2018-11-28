@@ -1,4 +1,4 @@
-<?php include('includes/db.php'); ?>
+
 
 
 
@@ -35,7 +35,7 @@ if (isset($_GET['id'])) {
 	$query = "DELETE FROM sub_category WHERE id=$id";
 	$result = mysqli_query($conn, $query);
 
-	header("location:add_sub_category.php");
+	header("location:index.php?p=add_sub_category");
 	
 }
 
@@ -44,9 +44,7 @@ if (isset($_GET['id'])) {
  ?>
 
 
-<?php include('includes/header.php'); ?>
 
-<?php include('includes/navigation.php'); ?>
 
 
 <div class="container">
@@ -138,8 +136,12 @@ if (isset($_GET['id'])) {
 
 							 ?>
 							
-			<td><a href="includes/update_data.php?id=<?php echo $sub_cat_id; ?>">edit</a></td>
-			<td><a onclick="javascript: return confirm('delete data?')" href="add_sub_category.php?id=<?php echo $sub_cat_id; ?>">delete</a></td>
+			<td><a href="index.php?p=update_sub_cat&id=<?php echo $sub_cat_id; ?>">edit</a></td>
+			
+
+			<!-- <td><a href="includes/update_data.php?id=<?php //echo $sub_cat_id; ?>">edit</a></td> -->
+			<!-- <td><a onclick="javascript: return confirm('delete data?')" href="add_sub_category.php?id=<?php //echo $sub_cat_id; ?>">delete</a></td> -->
+		<td><a onclick="javascript: return confirm('delete data?')" href="index.php?p=add_sub_category&id=<?php echo $sub_cat_id; ?>">delete</a></td>	
 							
 						</tr>
 
@@ -153,7 +155,3 @@ if (isset($_GET['id'])) {
 		</div>
 	</div>
 </div>
-
-
-
-<?php include('includes/footer.php'); ?>
